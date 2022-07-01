@@ -8,7 +8,6 @@
 :set softtabstop
 
 call plug#begin()
-" General
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/tpope/vim-surround'
@@ -22,11 +21,13 @@ Plug 'https://github.com/preservim/tagbar'
 
 Plug 'https://github.com/neoclide/coc.nvim'
 
-" Plug 'https://github.com/ryanoasis/vim-devicons'
 call plug#end()
 
 " nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 " nnoremap <C-f> :NERDTreeFind<CR>
+
+" Set working directory to the current file 
+autocmd BufEnter * lcd %:p:h
 
 :colorscheme desert
